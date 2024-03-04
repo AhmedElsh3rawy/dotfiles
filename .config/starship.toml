@@ -1,0 +1,98 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[❯](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+
+##################
+# ~/.config/starship.toml
+
+#Use custom format
+
+# format = '''
+# [┌───────────────────>](bold green)
+# [│](bold green)$directory$rust$package
+# [└─>](bold green) '''
+#
+# # Wait 10 milliseconds for starship to check files under the current directory.
+# scan_timeout = 10
+#
+# # Disable the blank line at the start of the prompt
+# add_newline = false
+#
+# # Set 'foo' as custom color palette
+# palette = 'foo'
+#
+# # Define custom colors
+# [palettes.foo]
+# # Overwrite existing color
+# blue = '21'
+# # Define new color
+# mustard = '#af8700'
+
+##################
+# ~/.config/starship.toml
+[c]
+disabled=true
+
+[python]
+disabled=true
+symbol = '󱔎 '
+#pyenv_version_name = true
+
+[golang]
+disabled=true
+format = 'via [ $version](bold cyan) '
+
+# [dotnet]
+# symbol = '󰪮 '
+
+
+[rust]
+disabled=true
+# format = 'via [ $version](red bold)'
+
+
+[git_branch]
+symbol = " "
+
+[lua]
+disabled=true
+# format = 'via [ $version](bold blue) '
+
+[java]
+disabled=true
+symbol = '󰬷 '
+
+[nodejs]
+disabled=true
+# [cmd_duration]
+# min_time = 1
+# format = "$duration 󱑂 "
+# disabled = false
+# style = "fg:#E8E3E3 bg:#252525 bold"
+
+
+
+# # Get editor completions based on the config schema
+# "$schema" = 'https://starship.rs/config-schema.json'
+#
+# # Inserts a blank line between shell prompts
+# add_newline = true
+#
+# # Replace the '❯' symbol in the prompt with '➜'
+# [character] # The name of the module we are configuring is 'character'
+# success_symbol = '[❯](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+#
+# # Disable the package module, hiding it from the prompt completely
+# [package]
+# disabled = true
