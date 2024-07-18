@@ -1,0 +1,11 @@
+configuration {
+  display-drun: "Apps:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Nerd Font";
+  icon-theme: "candy-icons-master";
+  show-icons: true;
+  modi: "window,drun,emoji";
+}
+
+@theme "nord.rasi"
