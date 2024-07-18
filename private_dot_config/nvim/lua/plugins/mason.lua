@@ -1,0 +1,27 @@
+return {
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          -- LSPs
+          "lua_ls",
+          "rust_analyzer",
+          "tsserver",
+          "eslint",
+          "tailwindcss",
+          "pyright",
+          "clangd",
+          "gopls",
+          "bashls",
+        },
+      })
+    end,
+  },
+}
