@@ -92,7 +92,11 @@ eval "$(zoxide init --cmd cd zsh)"
 # my aliases
 alias nv='nvim'
 alias nf='neofetch'
+alias ff='fastfetch'
 alias ls='exa'
+alias lg='lazygit'
+alias mk='make'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias cm='chezmoi'
