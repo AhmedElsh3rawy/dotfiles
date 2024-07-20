@@ -8,5 +8,5 @@ configuration {
   modi: "window,drun,emoji";
 }
 
-//@theme "nord.rasi"
-@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "nord.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
