@@ -7,8 +7,6 @@ K.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 K.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Nvim tree" })
 K.set("n", "<leader>bc", ":BufferLinePickClose<CR>", { desc = "Pick buffer to close" })
 K.set("i", "jn", "<Esc>", {})
--- Make neovim transparant
-K.set("n", "<leader>T", ":lua TransColor()<CR>", {})
 -- Navigate vim panes better
 -- K.set("n", "<S-k>", ":wincmd k<CR>")
 -- K.set("n", "<S-j>", ":wincmd j<CR>")
