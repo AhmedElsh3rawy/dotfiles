@@ -240,6 +240,9 @@ bindsym $mod+r mode "resize"
 #         status_command polybar
 # }
 
+# Floating windows
+for_window [class="Parole"] floating enable, move position center, resize set 50%, resize set 50%
+
 # remove the window title
 default_border pixel 0
 default_floating_border pixel 0
