@@ -242,6 +242,7 @@ bindsym $mod+r mode "resize"
 
 # Floating windows
 for_window [class="Parole"] floating enable, move position center, resize set 50%, resize set 50%
+for_window [class="gnome-calculator"] floating enable, move position center, resize set 30%, resize set 30%
 
 # remove the window title
 default_border pixel 0
