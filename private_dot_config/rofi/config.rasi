@@ -1,13 +1,14 @@
 configuration {
-    font:                "JetBrainsMono Nerd Font 10";
+    font:                "Noto Sans Regular 10";
     show-icons:          true;
-//    icon-theme:          "Qogir";
+    icon-theme:          "Qogir";
     display-drun:        "Apps";
     display-window:      "Windows";
     drun-display-format: "{name}";
     scroll-method:       0;
     disable-history:     false;
     sidebar-mode:        false;
+    modi:                "window,run,drun,emoji";
 }
 
 @import "~/.config/rofi/arc_dark.rasi"
