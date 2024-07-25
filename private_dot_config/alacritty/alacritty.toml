@@ -1,6 +1,6 @@
 import =[
-  "~/.config/alacritty/rose-pine.toml"
-  # "~/.config/alacritty/catppuccin.toml"
+  # "~/.config/alacritty/rose-pine.toml"
+  "~/.config/alacritty/catppuccin.toml"
 ]
 
 [env]
