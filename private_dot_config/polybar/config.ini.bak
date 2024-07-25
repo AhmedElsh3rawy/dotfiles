@@ -17,60 +17,28 @@
 ;==========================================================
 
 [colors]
-; background = #282A2E
-background = #000000
+background = #282A2E
 background-alt = #373B41
 foreground = #C5C8C6
-; primary = #cba6f7
-primary = #19ffa8
-; primary = #ebbcba
+primary = #F0C674
 secondary = #8ABEB7
 alert = #A54242
 disabled = #707880
- rosewater = #f5e0dc
- flamingo = #f2cdcd
- pink = #f5c2e7
- mauve = #cba6f7
- red = #f38ba8
- maroon = #eba0ac
- peach = #fab387
- yellow = #f9e2af
- green = #a6e3a1
- teal = #94e2d5
- sky = #89dceb
- sapphire = #74c7ec
- blue = #89b4fa
- lavender = #b4befe
- text = #cdd6f4
- subtext1 = #bac2de
- subtext0 = #a6adc8
- overlay2 = #9399b2
- overlay1 = #7f849c
- overlay0 = #6c7086
- surface2 = #585b70
- surface1 = #45475a
- surface0 = #313244
- base = #1e1e2e
- mantle = #181825
- crust = #11111b
- transparent = #FF00000
 
-[global/wm]
-margin-top = 0
-
-[bar/mybar]
+[bar/example]
 width = 100%
-height = 20pt
-; radius = 6
-radius = 0
+height = 24pt
+radius = 6
 
-margin-top = 0
 ; dpi = 96
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3pt
+
+border-size = 4pt
+border-color = #00000000
 
 padding-left = 0
 padding-right = 1
@@ -80,17 +48,21 @@ module-margin = 1
 separator = |
 separator-foreground = ${colors.disabled}
 
-; font-0 = monospace;2
-font-0 = JetBrainsMonoNerdFont:pixelsize=12;2
+font-0 = monospace;2
 
-modules-left = xworkspaces
-modules-center = date
-modules-right = pulseaudio memory cpu battery wlan powermenu
+modules-left = xworkspaces xwindow
+modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 enable-ipc = true
+
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
 
 [module/systray]
 type = internal/tray
@@ -135,13 +107,13 @@ label-unmounted-foreground = ${colors.disabled}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume-prefix = "  "
+format-volume-prefix = "VOL "
 format-volume-prefix-foreground = ${colors.primary}
 format-volume = <label-volume>
 
 label-volume = %percentage%%
 
-label-muted = " "
+label-muted = muted
 label-muted-foreground = ${colors.disabled}
 
 [module/xkeyboard]
@@ -159,121 +131,46 @@ label-indicator-background = ${colors.secondary}
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+format-prefix = "RAM "
 format-prefix-foreground = ${colors.primary}
 label = %percentage_used:2%%
 
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "CPU "
 format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
 [network-base]
 type = internal/network
 interval = 5
-; format-connected = <label-connected>
+format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 
 [module/wlan]
 inherit = network-base
 interface-type = wireless
-label-connected = 󰤨  %{F#C5C8C6}%essid%
-label-connected-foreground = ${colors.primary}
-; format-packetloss = <animation-packetloss> <label-connected>
-; format-connected = <ramp-signal>
-; format-packetloss = <animation-packetloss>
-label-disconnected = "󰤮"
-label-disconnected-foreground = ${colors.primary}
-
-ramp-signal-0 = "󰤯"
-ramp-signal-1 = "󰤟"
-ramp-signal-2 = "󰤢"
-ramp-signal-3 = "󰤥"
-ramp-signal-4 = "󰤨"
-
-animation-packetloss-0 = "󰤯"
-animation-packetloss-1 = "󰤟"
-animation-packetloss-2 = "󰤢"
-animation-packetloss-3 = "󰤥"
-animation-packetloss-4 = "󰤨"
+label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
 
 [module/eth]
 inherit = network-base
 interface-type = wired
 label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
 
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 100
-low-at = 20
-format-prefix = "BATTERY "
-format-prefix-foreground = ${colors.primary}
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #19ffa8
-format-background = ${colors.background}
-
-format-discharging = <ramp-capacity> <label-discharging>
-; format-discharging-underline = #0af
-
-# format-low = <animation-charging> <label-charging>
-format-low-underline = #fa1331
-
-format-full-prefix = "󰁹 "
-; format-full-prefix-foreground = ${colors.foreground-alt}
-; format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = 󰂎
-ramp-capacity-1 = 󰁻
-ramp-capacity-2 = 󰁾
-ramp-capacity-3 = 󰂀
-ramp-capacity-4 = 󰂂
-ramp-capacity-5 = 󰁹
-ramp-capacity-foreground = ${colors.primary}
-
-animation-charging-0 = 󰢜
-animation-charging-1 = 󰂆
-animation-charging-2 = 󰢝
-animation-charging-3 = 󰢞
-animation-charging-4 = 󰂋
-animation-charging-5 = 󰂄
-animation-charging-foreground = ${colors.primary}
-animation-charging-framerate = 750
-
 [module/date]
 type = internal/date
 interval = 1
 
-date = %Y-%m-%d %I:%M %p
-date-alt = %Y-%m-%d %I:%M:%S
+date = %H:%M
+date-alt = %Y-%m-%d %H:%M:%S
 
 label = %date%
-label-foreground = ${colors.foreground}
+label-foreground = ${colors.primary}
 
 [settings]
 screenchange-reload = true
 pseudo-transparency = true
 
-[module/powermenu]
-type = custom/menu
-expand-right = true
-format-spacing = 1
-label-open = "󰟄"
-label-open-foreground = ${colors.secondary}
-label-close = 󰟃 cancel
-label-close-foreground = ${colors.primary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = Reboot
-menu-0-0-exec = reboot
-menu-0-1 = Shutdown
-menu-0-1-exec = poweroff
-menu-0-2 = Logout
-menu-0-2-exec = i3-msg exit
-menu-1-0 = Cancel
-menu-1-0-exec = menu-open-0
+; vim:ft=dosini
