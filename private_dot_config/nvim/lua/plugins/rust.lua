@@ -8,11 +8,11 @@ return {
 		end,
 	},
 	-- rust config
-	{
-		"mrcjkb/rustaceanvim",
-		version = "^3", -- Recommended
-		ft = { "rust" },
-	},
+	-- {
+	-- 	"mrcjkb/rustaceanvim",
+	-- 	version = "^4",
+	-- 	ft = { "rust" },
+	-- },
 	-- crates in rust
 	{
 		"saecki/crates.nvim",
