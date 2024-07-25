@@ -1,7 +1,7 @@
 configuration {
     font:                "JetBrainsMono Nerd Font 10";
     show-icons:          true;
-    icon-theme:          "Qogir";
+//    icon-theme:          "Qogir";
     display-drun:        "Apps";
     display-window:      "Windows";
     drun-display-format: "{name}";
