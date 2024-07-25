@@ -1,4 +1,7 @@
 # dotfiles for my linux programs
 
-![wallpaper](assets/img1.png)
-![terminal with neofetch](assets/img2.png)
+## This is a minimal configs for my system I also build my own neovim
+
+![wallpaper](assets/img2.png)
+
+![terminal with neofetch](assets/img1.png)
