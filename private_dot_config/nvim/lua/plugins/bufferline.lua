@@ -5,6 +5,16 @@ return {
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("bufferline").setup({
+				-- highlights = {
+				-- 	fill = {
+				-- 		fg = "#45475a",
+				-- 		bg = "#181825",
+				-- 	},
+				-- 	background = {
+				-- 		fg = "#ffffff",
+				-- 		bg = "#1e1e2e",
+				-- 	},
+				-- },
 				options = {
 					offsets = {
 						{
