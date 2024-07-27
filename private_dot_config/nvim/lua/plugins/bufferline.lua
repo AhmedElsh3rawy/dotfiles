@@ -19,7 +19,8 @@ return {
 					offsets = {
 						{
 							filetype = "NvimTree",
-							text = "File Explorer",
+							-- text = "File Explorer",
+							text = "",
 							highlight = "Directory",
 							separator = true,
 						},
@@ -35,7 +36,6 @@ return {
 		},
 		config = function()
 			require("bufferline-cycle-windowless").setup({
-				-- whether to start in enabled or disabled mode
 				default_enabled = true,
 			})
 		end,
