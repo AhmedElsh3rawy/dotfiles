@@ -14,7 +14,7 @@ return {
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.golines,
 				null_ls.builtins.formatting.black,
-				null_ls.builtins.diagnostics.mypy,
+				-- null_ls.builtins.diagnostics.mypy,
 				-- null_ls.builtins.formatting.ruff,
 				-- null_ls.builtins.formatting.nixpkgs_fmt,
 				null_ls.builtins.formatting.shfmt,
