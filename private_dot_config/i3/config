@@ -233,21 +233,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         # status_command i3status
-#         status_command polybar
-# }
-
-# Floating windows
-for_window [class="Parole"] floating enable, move position center, resize set 50%, resize set 50%
-for_window [class="gnome-calculator"] floating enable, move position center, resize set 30%, resize set 30%
-
-# remove the window title
-default_border pixel 0
-default_floating_border pixel 0
-
 # colors
 set $rosewater #f5e0dc
 set $flamingo #f2cdcd
@@ -283,3 +268,32 @@ client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+# bar {
+#     colors {
+#     background         $base
+#     statusline         $text
+#     focused_statusline $text
+#     focused_separator  $base
+#     focused_workspace  $base $base $green
+#     active_workspace   $base $base $blue
+#     inactive_workspace $base $base $surface1
+#     urgent_workspace   $base $base $surface1
+#     binding_mode       $base $base $surface1
+#   }
+#         font pango:JetBrainsMono Nerd Font 11
+#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#           position bottom
+# }
+
+# Floating windows
+for_window [class="Parole"] floating enable, move position center, resize set 50%, resize set 50%
+for_window [class="gnome-calculator"] floating enable, move position center, resize set 30%, resize set 30%
+
+# remove the window title
+default_border pixel 0
+default_floating_border pixel 0
+
