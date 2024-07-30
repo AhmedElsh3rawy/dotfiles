@@ -3,19 +3,35 @@
 color=94
 
 function get_volume {
-	pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
+  pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
 }
 
 function get_mute {
-	pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
+  pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
 }
+
+case $BLOCK_BUTTON in
+1) # Left click
+  if [ $(get_mute) == "yes" ]; then
+    pactl set-sink-mute @DEFAULT_SINK@ "0"
+  else
+    pactl set-sink-mute @DEFAULT_SINK@ "1"
+  fi
+  ;;
+4) # Scroll up
+  pactl set-sink-volume @DEFAULT_SINK@ +1%
+  ;;
+5) # Scroll down
+  pactl set-sink-volume @DEFAULT_SINK@ -1%
+  ;;
+esac
 
 output=""
 
 if [ $(get_mute) == "yes" ]; then
-	output=$(echo -e "\033[${color}m \033[0m")
+  output="muted"
 else
-	output="$(echo -e "\033[${color}m  \033[0m")$(get_volume)%"
+  output="$(get_volume)%"
 fi
 
 echo "$output"
