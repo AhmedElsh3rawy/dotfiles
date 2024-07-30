@@ -27,3 +27,5 @@ disabled = true
 disabled = true
 [python]
 disabled = true
+[perl]
+disabled = true
