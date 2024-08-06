@@ -4,6 +4,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export PATH="$HOME/.local/bin:$PATH"
 # set theme
 # ZSH_THEME="robbyrussell"
 
@@ -121,6 +122,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
 # my aliases
 alias nv='nvim'
+alias v='vim'
 alias nf='neofetch'
 alias ff='fastfetch'
 alias ls='exa'
@@ -133,4 +135,4 @@ alias ....='cd ../../..'
 alias cm='chezmoi'
 alias up='sudo pacman -Syu'
 alias ra='yazi'
-alias I='sudo pacman -S'
+alias i='sudo pacman -S'
