@@ -20,3 +20,6 @@ map("n", "<C-k>", "<C-w>k", { noremap = true, silent = true, desc = "switch wind
 map("n", "<Tab>", "<CMD>BufferLineCycleWindowlessNext<CR>", { noremap = true, silent = true })
 map("n", "<S-Tab>", "<CMD>BufferLineCycleWindowlessPrev<CR>", { noremap = true, silent = true })
 map("n", "<C-Tab>", "<CMD>BufferLineCycleWindowlessToggle<CR>", { noremap = true, silent = true })
+-- for debugging
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
+map("n", "<leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
