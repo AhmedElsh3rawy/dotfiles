@@ -56,8 +56,9 @@ bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 # take screenshot
 # bindsym Print exec --no-startup-id scrot ~/Pictures/screenshot/%Y-%m-%d-%T-screenshot.jpg && notify-send "Screenshot saved to ~/Pictures/screenshot$(date +"%Y-%m-%d-%T")-screenshot.png"
 
-bindsym Print exec --no-startup-id flameshot full --path ~/Pictures/screenshot/"screenshot_$(date).png"
-bindsym $mod+Print exec --no-startup-id flameshot gui --path ~/Pictures/screenshot/"screenshot_$(date)_cut.png"
+bindsym Print exec --no-startup-id flameshot full --path ~/Pictures/screenshot/"$(date +"%Y-%m-%d-%T")-screenshot.png"
+
+bindsym $mod+Print exec --no-startup-id flameshot gui --path ~/Pictures/screenshot/"$(date +"%Y-%m-%d-%T")-screenshot-cut.png"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
