@@ -29,3 +29,9 @@ disabled = true
 disabled = true
 [perl]
 disabled = true
+[java]
+disabled = true
+[scala]
+disabled = true
+
+
