@@ -29,7 +29,7 @@ return {
 
 		local servers = { "bashls", "lua_ls", "pyright", "clangd", "nil_ls", "eslint", "tailwindcss" }
 
-		lspconfig.tsserver.setup({
+		lspconfig.ts_ls.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 			init_options = {
