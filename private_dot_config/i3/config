@@ -75,7 +75,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 #i3-sensible-terminal
 
 # start a browser
@@ -152,13 +152,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-assign [class="kitty"] 1
+assign [class="Alacritty"] 1
 assign [class="Brave"] 2
 assign [class="Thunar"] 3
 # assign [class="Thunderbird"] 4
 assign [class="TelegramDesktop"] 5
 
-for_window [class=kitty] focus
+for_window [class=Alacritty] focus
 for_window [class=Brave] focus
 for_window [class=Thunar] focus
 # for_window [class=Thunderbird] focus
