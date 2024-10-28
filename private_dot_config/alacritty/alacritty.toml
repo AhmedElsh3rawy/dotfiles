@@ -1,0 +1,34 @@
+general.import =[
+  # "~/.config/alacritty/rose-pine.toml"
+  "~/.config/alacritty/catppuccin.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 9
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+# [colors.primary]
+# background = "#000000"
+# foreground = "#ffffff"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+# opacity = 0.8
+opacity = 1
+
