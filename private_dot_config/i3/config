@@ -43,7 +43,7 @@ exec --no-startup-id feh --bg-fill /home/ahmed/.config/i3/wallpaper/cyperpunk_gi
 # exec --no-startup-id polybar
 
 # picom Note: if you play games disable it
-# exec_always --no-startup-id picom
+exec_always --no-startup-id picom
 
 # setup dunst for notifications
 exec --no-startup-id dunst
@@ -235,7 +235,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# colors
+# catppuccin colors
 set $rosewater #f5e0dc
 set $flamingo #f2cdcd
 set $pink #f5c2e7
