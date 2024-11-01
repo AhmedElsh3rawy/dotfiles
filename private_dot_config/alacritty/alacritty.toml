@@ -1,6 +1,7 @@
 general.import =[
   # "~/.config/alacritty/rose-pine.toml"
   "~/.config/alacritty/catppuccin.toml"
+  # "~/.config/alacritty/gruvbox.toml"
 ]
 
 [env]
