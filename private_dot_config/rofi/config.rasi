@@ -2,7 +2,7 @@ configuration {
     font:                "Noto Sans Regular 10";
     show-icons:          true;
     icon-theme:          "Qogir";
-    display-drun:        "Apps";
+    display-drun:        "App";
     display-window:      "Windows";
     drun-display-format: "{name}";
     scroll-method:       0;
