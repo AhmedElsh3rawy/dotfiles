@@ -1,4 +1,22 @@
-@import "mocha.css";
+@define-color base #282828;
+@define-color text #ebdbb2;
+
+@define-color color0 #3c3836;
+@define-color color1 #cc241d;
+@define-color color2 #98971a;
+@define-color color3 #d79921;
+@define-color color4 #458588;
+@define-color color5 #b16286;
+@define-color color6 #689d6a;
+@define-color color7 #a89984;
+@define-color color8 #928374;
+@define-color color9 #fb4934;
+@define-color color10 #b8bb26;
+@define-color color11 #fabd2f;
+@define-color color12 #83a598;
+@define-color color13 #d3869b;
+@define-color color14 #8ec07c;
+@define-color color15 #fbf1c7;
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -14,8 +32,8 @@
 
 window#waybar {
   background-color: @base;
-  border-bottom: 2px solid @surface0;
-  color: #ffffff;
+  border-bottom: 2px solid @color0;
+  color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -53,7 +71,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px @color15;
 }
 
 /* you can set a style on hover for any module like this */
@@ -77,11 +95,11 @@ button:hover {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @color9;
 }
 
 #workspaces button.active {
-  background-color: #cba6f7;
+  background-color: @color7;
   color: #000000;
 }
 
@@ -128,23 +146,23 @@ button:hover {
 
 #clock {
   /* background-color: #64727d; */
-  color: @rosewater;
-  border-bottom: 2px solid @rosewater;
+  color: @color15;
+  border-bottom: 2px solid @color15;
 }
 
 #battery {
   /* background-color: #ffffff; */
   /* color: #000000; */
-  color: @teal;
-  border-bottom: 2px solid @teal;
+  color: @color12;
+  border-bottom: 2px solid @color12;
 }
 
 #battery.charging,
 #battery.plugged {
   /* color: #ffffff; */
   /* background-color: #26a65b; */
-  color: @green;
-  border-bottom: 2px solid @green;
+  color: @color14;
+  border-bottom: 2px solid @color14;
 }
 
 @keyframes blink {
@@ -191,14 +209,14 @@ label:focus {
 #cpu {
   /* background-color: #2ecc71; */
   /* color: #000000; */
-  color: @maroon;
-  border-bottom: 2px solid @maroon;
+  color: @color1;
+  border-bottom: 2px solid @color1;
 }
 
 #memory {
   /* background-color: #9b59b6; */
-  color: @mauve;
-  border-bottom: 2px solid @mauve;
+  color: @color11;
+  border-bottom: 2px solid @color11;
 }
 
 #disk {
@@ -207,27 +225,27 @@ label:focus {
 
 #backlight {
   /* background-color: #90b1b1; */
-  color: @lavender;
-  border-bottom: 2px solid @lavender;
+  color: @color15;
+  border-bottom: 2px solid @color15;
 }
 
 #network {
   /* background-color: #2980b9; */
-  color: @blue;
-  border-bottom: 2px solid @blue;
+  color: @color4;
+  border-bottom: 2px solid @color4;
 }
 
 #network.disconnected {
   /* background-color: #f53c3c; */
-  color: @red;
-  border-bottom: 2px solid @red;
+  color: @color1;
+  border-bottom: 2px solid @color1;
 }
 
 #pulseaudio {
   /* background-color: #f1c40f; */
   /* color: #000000; */
-  color: @yellow;
-  border-bottom: 2px solid @yellow;
+  color: @color11;
+  border-bottom: 2px solid @color11;
 }
 
 #pulseaudio.muted {
@@ -260,8 +278,8 @@ label:focus {
 
 #temperature {
   /* background-color: #f0932b; */
-  color: @peach;
-  border-bottom: 2px solid @peach;
+  color: @color2;
+  border-bottom: 2px solid @color2;
 }
 
 #temperature.critical {

@@ -135,8 +135,9 @@ alias cm='chezmoi'
 alias up='sudo pacman -Syu'
 alias ra='yazi'
 alias i='sudo pacman -S'
-alias py='python'
+alias py='python3'
 alias pip='pip3'
+alias z='zathura'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
