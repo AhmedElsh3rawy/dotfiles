@@ -1,5 +1,5 @@
 configuration {
-    font:                "Noto Sans Regular 10";
+    font:                "JetBrainsMono Nerd Font 10";
     show-icons:          true;
     icon-theme:          "Qogir";
     display-drun:        "App";
@@ -11,11 +11,12 @@ configuration {
     modi:                "window,run,drun,emoji";
 }
 
-@import "~/.config/rofi/arc_dark.rasi"
+@import "~/.config/rofi/mod.rasi"
 
 window {
-    background-color: @background;
-    border:           0;
+    background-color: #1e1e2e;
+    border:           2px;
+    border-color:     #cba6f7;
     border-radius:    10px;
     padding:          30;
 }

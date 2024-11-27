@@ -18,6 +18,7 @@ window#waybar {
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
+  border-radius: 0px;
 }
 
 window#waybar.hidden {
@@ -156,8 +157,10 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
+  /* background-color: #f53c3c; */
+  /* color: #ffffff; */
+  color: #f53c3c;
+  border-bottom: 2px solid #f53c3c;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
