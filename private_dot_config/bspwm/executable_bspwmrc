@@ -1,0 +1,36 @@
+#! /bin/sh
+
+pgrep -x sxhkd >/dev/null || sxhkd &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+bspc config border_width 0
+bspc config window_gap 0
+
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+# resotre my cursor
+xsetroot -cursor_name left_ptr
+# bar
+polybar &
+# compositor
+picom &
+# nodification
+dunst &
+# clipboard manager
+clipmenud &
+
+# wallpaper
+source ~/.fehbg
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a kitty desktop='^1' focus=on follow=on
+bspc rule -a Brave-browser desktop='^2' focus=on follow=on
+bspc rule -a Thunar desktop='^3' focus=on follow=on
+bspc rule -a TelegramDesktop desktop='^5' focus=on follow=on
+bspc rule -a Galculator state=floating
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
