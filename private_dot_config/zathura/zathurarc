@@ -1,0 +1,17 @@
+# options
+set selection-clipboard clipboard
+set adjust-open "best-fit"
+set window-title-home-tilde true
+set window-title-home-tilde true
+set statusbar-home-tilde true
+set recolor-keephue true
+
+# font
+set font "JetBrainsMono Nerd Font"
+
+# theme
+include catppuccin-mocha
+
+# mappings
+map <C-i> recolor
+map <C-t> toggle_statusbar
