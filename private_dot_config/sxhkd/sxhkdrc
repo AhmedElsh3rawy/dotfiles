@@ -30,6 +30,14 @@ super + o
 super + l
   thunar
 
+# lock my computer
+super + x
+  i3lock -i ~/Pictures/cursed_locked.png --no-unlock-indicator
+
+# show keybindings
+super + F9
+  ~/.config/sxhkd/script/keybindings.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -129,8 +137,8 @@ super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # Switch to the next/previous workspace
-super + {n,p}
-  bspc desktop -f {next,prev}
+super + {n,u}
+  bspc desktop -f {next,prev}.local
 
 #
 # move/resize
