@@ -34,6 +34,9 @@ super + l
 super + x
   i3lock -i ~/Pictures/cursed_locked.png --no-unlock-indicator
 
+super + p
+  bspc desktop -f prev.local
+
 # show keybindings
 super + F9
   ~/.config/sxhkd/script/keybindings.sh
@@ -164,11 +167,21 @@ Print
 super + Print
   flameshot gui --path ~/Pictures/screenshot/"$(date +"%Y-%m-%d-%T")-screenshot-cut.png"
 
+# sound and volume
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle # for mute
+
+XF86AudioLowerVolume
+  pactl set-sink-volume @DEFAULT_SINK@ -5% # decrease
+
+XF86AudioRaiseVolume
+  pactl set-sink-volume @DEFAULT_SINK@ +5% # increase
+
 # backlight
-F6
+XF86MonBrightnessDown
     brightnessctl set 5%- # Decrease brightness
 
-F7
+XF86MonBrightnessUp
     brightnessctl set 5%+ # Increase brightness
 
 # shutdown
