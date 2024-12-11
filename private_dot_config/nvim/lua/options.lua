@@ -5,10 +5,10 @@ vim.g.maplocalleader = "\\"
 vim.wo.relativenumber = true
 opt.number = true
 opt.swapfile = false
-opt.expandtab = true -- Use spaces instead of tabs
-opt.tabstop = 2 -- Number of spaces a tab counts for
-opt.shiftwidth = 2 -- Number of spaces used for each step of (auto)indent
-opt.softtabstop = 2 -- Number of spaces a tab displays as
+opt.expandtab = true          -- Use spaces instead of tabs
+opt.tabstop = 4               -- Number of spaces a tab counts for
+opt.shiftwidth = 4            -- Number of spaces used for each step of (auto)indent
+opt.softtabstop = 2           -- Number of spaces a tab displays as
 opt.fillchars = { eob = " " } -- Remove the ~ line
 opt.undofile = true
 -- Copy to system clipboard
