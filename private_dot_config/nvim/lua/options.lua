@@ -8,11 +8,11 @@ opt.swapfile = false
 opt.expandtab = true          -- Use spaces instead of tabs
 opt.tabstop = 4               -- Number of spaces a tab counts for
 opt.shiftwidth = 4            -- Number of spaces used for each step of (auto)indent
-opt.softtabstop = 2           -- Number of spaces a tab displays as
+opt.softtabstop = 4           -- Number of spaces a tab displays as
 opt.fillchars = { eob = " " } -- Remove the ~ line
 opt.undofile = true
--- Copy to system clipboard
-opt.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus" -- Copy to system clipboard
+
 vim.o.signcolumn = "yes"
 vim.o.background = "dark"
 opt.termguicolors = true

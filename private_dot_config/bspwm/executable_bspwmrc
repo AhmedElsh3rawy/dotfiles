@@ -28,10 +28,10 @@ source ~/.fehbg
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a kitty desktop='^1' focus=on follow=on
 bspc rule -a Brave-browser desktop='^2' focus=on follow=on
-bspc rule -a Thunar desktop='^3' focus=on follow=on
+bspc rule -a Thunar desktop='^4' focus=on follow=on
 bspc rule -a TelegramDesktop desktop='^5' focus=on follow=on
 bspc rule -a VSCodium desktop='^6' focus=on follow=on
-bspc rule -a obsidian desktop='^8' focus=on follow=on
+bspc rule -a obsidian desktop='^3' focus=on follow=on
 bspc rule -a Zathura desktop='^9' focus=on follow=on
 bspc rule -a Galculator state=floating
 bspc rule -a mplayer2 state=floating
