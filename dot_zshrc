@@ -75,6 +75,7 @@ alias ra='yazi'
 alias py='python3'
 alias pip='pip3'
 alias z='zathura'
+alias pingo='ping google.com'
 alias ccf='codecrafters'
 
 # >>> conda initialize >>>
