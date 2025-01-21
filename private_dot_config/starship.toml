@@ -17,6 +17,8 @@ truncation_length = 20
 
 [c]
 disabled = true
+[conda]
+disabled = true
 [golang]
 disabled = true
 [nodejs]
