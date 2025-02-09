@@ -4,8 +4,10 @@
 
 - OS : **Arch Linux**
 - Shell: **zsh**
+- Shell prompt: **starship**
 - Terminal: **kitty + tmux**
 - File manager: **thunar**
+- Terminal file manager: **yazi**
 - Wallpaper manager: **feh**
 - WM : **bspwm**
 - Browser: **Brave and Firefox**
@@ -34,13 +36,14 @@ Section "InputClass"
     Option "NaturalScrolling" "false"
     Option "DisableWhileTyping" "true"
 EndSection
-
 ```
 
 - To add arabic language.
 
-  `sudo nvim /etc/locale.gen` and uncomment `ar_EG.UTF-8 UTF-8`  
-  `sudo locale-gen`  
+  `sudo nvim /etc/locale.gen` and uncomment `ar_EG.UTF-8 UTF-8`
+
+  `sudo locale-gen`
+
   add this to `/etc/X11/xorg.conf.d/00-keyboard.conf`
 
 ```conf
@@ -51,7 +54,6 @@ Section "InputClass"
         Option "XkbModel" "pc105+inet"
         Option "XkbOptions" "grp:alt_shift_toggle"
 EndSection
-
 ```
 
 #### All my programs use the [catppuccin](https://github.com/catppuccin/catppuccin) theme.
