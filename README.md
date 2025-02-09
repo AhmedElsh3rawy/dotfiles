@@ -37,7 +37,8 @@ EndSection
 
 ```
 
-- To add arabic language.  
+- To add arabic language.
+
   `sudo nvim /etc/locale.gen` and uncomment `ar_EG.UTF-8 UTF-8`  
   `sudo locale-gen`  
   add this to `/etc/X11/xorg.conf.d/00-keyboard.conf`
