@@ -37,4 +37,5 @@ disabled = true
 disabled = true
 [dotnet]
 disabled = true
-
+[terraform]
+disabled = true
