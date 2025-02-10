@@ -56,9 +56,13 @@ Section "InputClass"
 EndSection
 ```
 
+### Images
+
 ![Wallpaper](assets/wp.png)
 
 ![Terminal](assets/tm.png)
+
+![Menu](assets/mn.png)
 
 ![Neovim](assets/nv.png)
 
