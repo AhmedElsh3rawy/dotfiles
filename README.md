@@ -56,6 +56,12 @@ Section "InputClass"
 EndSection
 ```
 
+![Wallpaper](assets/wp.png)
+
+![Terminal](assets/tm.png)
+
+![Neovim](assets/nv.png)
+
 #### All my programs use the [catppuccin](https://github.com/catppuccin/catppuccin) theme.
 
 #### I use [chezmoi](https://www.chezmoi.io/) to manage my dotfiles
