@@ -1,6 +1,6 @@
 # dotfiles for my linux programs
 
-### Programs
+### Status
 
 - OS : **Arch Linux**
 - Shell: **zsh**
