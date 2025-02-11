@@ -3,3 +3,18 @@
 	email = ahmedelsharawy117@gmail.com
 [init]
 	defaultBranch = main
+
+[alias]
+  st = status
+  df = diff
+  co = checkout
+  br = branch
+  cm = commit -m
+  lg = log --oneline --graph --decorate --all
+  unstage = reset HEAD --
+  amend = commit --amend --no-edit
+  last = log -1 HEAD
+  uncommit = reset --soft HEAD~1
+
+[core]
+  editor = nvim
