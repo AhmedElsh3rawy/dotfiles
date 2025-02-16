@@ -21,3 +21,5 @@ opt.cursorline = true
 vim.api.nvim_buf_set_option(0, "syntax", "off")
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
+vim.o.spell = true
+vim.o.spelllang = "en"
