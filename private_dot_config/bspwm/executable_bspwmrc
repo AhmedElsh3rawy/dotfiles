@@ -27,7 +27,7 @@ source ~/.fehbg
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a kitty desktop='^1' focus=on follow=on
-bspc rule -a Brave-browser desktop='^2' focus=on follow=on
+bspc rule -a firefox desktop='^2' focus=on follow=on
 bspc rule -a Thunar desktop='^7' focus=on follow=on
 bspc rule -a TelegramDesktop desktop='^5' focus=on follow=on
 bspc rule -a VSCodium desktop='^6' focus=on follow=on
