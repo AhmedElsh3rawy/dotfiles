@@ -5,7 +5,8 @@ return {
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("bufferline").setup({
-				highlights = require("catppuccin.groups.integrations.bufferline").get(),
+				-- highlights = require("catppuccin.groups.integrations.bufferline").get(),
+				highlights = {},
 				options = {
 					offsets = {
 						{
