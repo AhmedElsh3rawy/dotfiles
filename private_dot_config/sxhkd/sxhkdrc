@@ -24,7 +24,7 @@ super + h
 
 # web browser
 super + o
-  brave
+  firefox
 
 # file manager
 super + l
