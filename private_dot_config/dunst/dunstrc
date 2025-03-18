@@ -87,7 +87,8 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#7f3fbf"
+    # frame_color = "#7f3fbf" # catppuccin
+    frame_color = "#ff5189" # moonfly
 
     # Define a color for the separator.
     # possible values are:
@@ -291,25 +292,47 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1e1e2e"
-    foreground = "#ffffff"
-    frame_color = "#cba6f7"
+    
+    # catppuccin
+    # background = "#1e1e2e"
+    # foreground = "#ffffff"
+    # frame_color = "#cba6f7"
+
+    # moonfly
+    background = "#080808"
+    foreground = "#bdbdbd"
+    frame_color = "#80a0ff"
+
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     icon = /home/ahmed/.config/dunst/icons/bell.png
 
 [urgency_normal]
-    background = "#1e1e2e"
-    foreground = "#ffffff"
-    frame_color = "#cba6f7"
+    # catppuccin
+    # background = "#1e1e2e"
+    # foreground = "#ffffff"
+    # frame_color = "#cba6f7"
+
+    # moonfly
+    background = "#080808"
+    foreground = "#bdbdbd"
+    frame_color = "#80a0ff"
+
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     icon = /home/ahmed/.config/dunst/icons/bell.png
 
 [urgency_critical]
-    background = "#1e1e2e"
-    foreground = "#ffffff"
-    frame_color = "#f38ba8"
+    #catppuccin
+    # background = "#1e1e2e"
+    # foreground = "#ffffff"
+    # frame_color = "#f38ba8"
+
+    # moonfly
+    background = "#080808"
+    foreground = "#bdbdbd"
+    frame_color = "#ff5189"
+
     timeout = 120
     # Icon for notifications with critical urgency, uncomment to enable
     icon = /home/ahmed/.config/dunst/icons/warning.png
