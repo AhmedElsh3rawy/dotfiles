@@ -1,12 +1,12 @@
 -- NeoVim config
 
-require("options")
-require("config.lazy")
-require("mappings")
+require('options')
+require('config.lazy')
+require('mappings')
 
 -- vim.cmd.colorscheme("catppuccin-mocha")
-vim.cmd.colorscheme("moonfly")
+vim.cmd.colorscheme('moonfly')
 
 -- make neovim transparent
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
