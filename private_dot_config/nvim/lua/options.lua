@@ -2,8 +2,8 @@ local opt = vim.opt
 local O = vim.o
 local G = vim.g
 
-G.mapleader = " "
-G.maplocalleader = "\\"
+G.mapleader = ' '
+G.maplocalleader = '\\'
 G.loaded_netrw = 0
 G.loaded_netrwPlugin = 0
 
@@ -13,17 +13,19 @@ opt.expandtab = true -- Use spaces instead of tabs
 opt.tabstop = 4 -- Number of spaces a tab counts for
 opt.shiftwidth = 4 -- Number of spaces used for each step of (auto)indent
 opt.softtabstop = 4 -- Number of spaces a tab displays as
-opt.fillchars = { eob = " " } -- Remove the ~ line
+opt.fillchars = { eob = ' ' } -- Remove the ~ line
 opt.undofile = true
-opt.clipboard = "unnamedplus" -- Copy to system clipboard
+opt.clipboard = 'unnamedplus' -- Copy to system clipboard
 opt.termguicolors = true
 opt.scrolloff = 8
 opt.cursorline = true
+opt.hlsearch = false
+opt.incsearch = true
 
-O.signcolumn = "yes"
-O.background = "dark"
+O.signcolumn = 'yes'
+O.background = 'dark'
 -- O.spell = true
 -- O.spelllang = "en"
 
-vim.api.nvim_buf_set_option(0, "syntax", "off")
+vim.api.nvim_buf_set_option(0, 'syntax', 'off')
 vim.wo.relativenumber = true
