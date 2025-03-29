@@ -1,12 +1,11 @@
 [colors]
-background = #1e1e2e
-; background = #1a1b26
-background-alt = #373B41
+background = #080808
+background-alt = #323437
 foreground = #FFFFFF
-primary = #81B1CE
+primary = #80a0ff
 ; primary = #19ffa8
 secondary = #8ABEB7
-alert = #A54242
+alert = #ff5454
 disabled = #707880
  rosewater = #f5e0dc
  flamingo = #f2cdcd
