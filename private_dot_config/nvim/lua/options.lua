@@ -9,10 +9,10 @@ G.loaded_netrwPlugin = 0
 
 opt.number = true
 opt.swapfile = false
-opt.expandtab = true -- Use spaces instead of tabs
-opt.tabstop = 4 -- Number of spaces a tab counts for
-opt.shiftwidth = 4 -- Number of spaces used for each step of (auto)indent
-opt.softtabstop = 4 -- Number of spaces a tab displays as
+opt.expandtab = true          -- Use spaces instead of tabs
+opt.tabstop = 4               -- Number of spaces a tab counts for
+opt.shiftwidth = 4            -- Number of spaces used for each step of (auto)indent
+opt.softtabstop = 4           -- Number of spaces a tab displays as
 opt.fillchars = { eob = ' ' } -- Remove the ~ line
 opt.undofile = true
 opt.clipboard = 'unnamedplus' -- Copy to system clipboard
