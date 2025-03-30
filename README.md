@@ -4,7 +4,7 @@
 
 - OS : **Arch Linux**
 - Shell: **zsh**
-- Shell prompt: **starship**
+- Shell prompt: **oh-my-posh**
 - Terminal: **kitty + tmux**
 - File manager: **thunar**
 - Terminal file manager: **yazi**
