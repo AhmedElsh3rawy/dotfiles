@@ -12,7 +12,6 @@ map('n', '<leader>ff', builtin.find_files, { desc = 'Find file' })
 map('n', '<leader>fw', builtin.live_grep, { desc = 'Find word' })
 map('n', '<leader>fh', builtin.help_tags, { desc = 'Find help' })
 map('n', '<leader>fb', builtin.buffers, { desc = 'Find buffer' })
-map('n', ' <leader>fm', '<CMD>Telescope harpoon marks<CR>', { desc = 'Find marked file' })
 -- nvim-tree
 map('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Nvim tree' })
 -- jump normal mode
@@ -25,23 +24,3 @@ map('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'switch wind
 -- for debugging
 map('n', '<leader>db', '<cmd> DapToggleBreakpoint <CR>', { desc = 'Add breakpoint at line' })
 map('n', '<leader>dr', '<cmd> DapContinue <CR>', { desc = 'Start or continue the debugger' })
--- harpoon
-map('n', 'hm', require('harpoon.ui').toggle_quick_menu, { desc = 'Harpoon menu' })
-map('n', 'hx', require('harpoon.mark').add_file, { desc = 'Harpoon add file' })
-map('n', 'hn', require('harpoon.ui').nav_next, { desc = 'Harpoon next' })
-map('n', 'hp', require('harpoon.ui').nav_prev, { desc = 'Harpoon previous' })
-map('n', 'h1', function()
-  require('harpoon.ui').nav_file(1)
-end, { desc = 'Harpoon file 1' })
-
-map('n', 'h2', function()
-  require('harpoon.ui').nav_file(2)
-end, { desc = 'Harpoon file 2' })
-
-map('n', 'h3', function()
-  require('harpoon.ui').nav_file(3)
-end, { desc = 'Harpoon file 3' })
-
-map('n', 'h4', function()
-  require('harpoon.ui').nav_file(4)
-end, { desc = 'Harpoon file 4' })
