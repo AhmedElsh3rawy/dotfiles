@@ -1,7 +1,7 @@
 # initialize a tmux session
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux
-# fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
 # zinit home directory
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -85,13 +85,15 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 # my aliases
 alias nv='nvim'
 alias v='vim'
+alias mkdir='mkdir -p'
 alias ff='fastfetch'
 alias ls='eza'
 alias lg='lazygit'
 alias mk='make'
 alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
 alias cm='chezmoi'
 alias up='sudo pacman -Syu'
 alias ra='yazi'
