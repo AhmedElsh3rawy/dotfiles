@@ -2,6 +2,12 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
+    local mode = {
+      'mode',
+      fmt = function(str)
+        return ' ' .. str
+      end,
+    }
     require('lualine').setup({
       options = {
         globalstatus = true,
@@ -10,7 +16,7 @@ return {
         section_separators = { left = '', right = '' },
       },
       sections = {
-        lualine_a = { 'mode' },
+        lualine_a = { mode },
         lualine_b = { 'filename' },
         lualine_c = { 'branch', 'diff', 'diagnostics' },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
