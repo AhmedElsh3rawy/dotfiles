@@ -27,7 +27,7 @@ return {
             bufmap('<leader>D', vim.lsp.buf.type_definition)
         end
 
-        local servers = { 'bashls', 'lua_ls', 'pylsp', 'ruff', 'clangd', 'eslint', 'html' }
+        local servers = { 'bashls', 'lua_ls', 'pyright', 'ruff', 'clangd', 'html' }
 
         lspconfig.ts_ls.setup({
             on_attach = on_attach,
