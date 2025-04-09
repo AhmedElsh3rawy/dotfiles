@@ -1,4 +1,5 @@
 local dap = require('dap')
+local dap_utils = require('dap.utils')
 
 require('dap').adapters['pwa-node'] = {
     type = 'server',
@@ -22,20 +23,27 @@ for _, language in ipairs({ 'typescript', 'javascript' }) do
             name = 'Launch file',
             program = '${file}',
             cwd = '${workspaceFolder}',
-            runtimeExecutable = 'node',
             stopOnEntry = true,
-            onExit = function()
-                print('Debug session exited')
-            end,
+            sourceMaps = true,
         },
         -- Debug nodejs processes (make sure to add --inspect when you run the process)
         {
             type = 'pwa-node',
             request = 'attach',
-            name = 'Attach',
-            processId = require('dap.utils').pick_process,
+            name = 'Auto Attach',
+            -- processId = dap_utils.pick_process,
             cwd = vim.fn.getcwd(),
             sourceMaps = true,
         },
     }
 end
+
+dap.configurations.python = {
+    {
+        type = 'python',
+        request = 'launch',
+        name = 'Launch file',
+        program = '${file}',
+        console = 'integratedTerminal',
+    },
+}
