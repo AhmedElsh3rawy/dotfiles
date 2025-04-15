@@ -10,6 +10,9 @@ return {
                 nvimtree = true,
                 treesitter = true,
                 -- transparent_background = true,
+                integrations = {
+                    blink_cmp = true,
+                },
             })
         end,
     },
