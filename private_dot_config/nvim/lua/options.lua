@@ -28,5 +28,4 @@ O.background = 'dark'
 -- O.spell = true
 -- O.spelllang = "en"
 
-vim.api.nvim_buf_set_option(0, 'syntax', 'off')
 vim.wo.relativenumber = true
