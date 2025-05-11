@@ -14,8 +14,12 @@ configuration {
 @import "~/.config/rofi/mod.rasi"
 
 window {
-    background-color: #1e1e2e;
-    border-color:     #cba6f7;
+    //catppuccin
+    // background-color: #1e1e2e;
+    // border-color:     #cba6f7;
+    // tokyonight
+    background-color: #1a1b26;
+    border-color:     #f7768e;
     border:           2px;
     border-radius:    10px;
     padding:          30;
