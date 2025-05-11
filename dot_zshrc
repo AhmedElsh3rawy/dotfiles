@@ -43,7 +43,7 @@ eval "$(zoxide init --cmd cd zsh)"
 source <(fzf --zsh)
 
 # History
-HISTSIZE=50000
+HISTSIZE=5000000000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -88,6 +88,7 @@ alias v='vim'
 alias mkdir='mkdir -p'
 alias ff='fastfetch'
 alias ls='eza'
+alias ll='ls -lah'
 alias lg='lazygit'
 alias mk='make'
 alias ..='cd ..'
@@ -99,8 +100,9 @@ alias up='sudo pacman -Syu'
 alias ra='yazi'
 alias py='python3'
 alias pip='pip3'
-alias z='zathura'
+alias za='zathura'
 alias pingo='ping google.com'
 alias ccf='codecrafters'
 alias tf='terraform'
 alias q='exit'
+alias c='clear'
