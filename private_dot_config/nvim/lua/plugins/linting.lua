@@ -9,7 +9,8 @@ return {
         lint.linters_by_ft = {
             javascript = { 'biomejs' },
             typescript = { 'biomejs' },
-            python = { 'ruff', 'mypy' },
+            python = { 'ruff' },
+            php = { 'phpstan' },
         }
 
         vim.api.nvim_create_autocmd({ 'BufReadPre', 'BufEnter', 'BufWritePost', 'InsertLeave', 'TextChanged' }, {
