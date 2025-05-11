@@ -66,6 +66,6 @@ EndSection
 
 ![Neovim](assets/nv.png)
 
-#### All my programs use the [catppuccin](https://github.com/catppuccin/catppuccin) theme.
+#### Moving all my programs to [tokyonight](https://github.com/folke/tokyonight.nvim/tree/main) theme.
 
 #### I use [chezmoi](https://www.chezmoi.io/) to manage my dotfiles
