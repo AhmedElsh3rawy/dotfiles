@@ -5,7 +5,6 @@ require('config.lazy')
 require('config.lsp')
 require('mappings')
 
--- vim.cmd.colorscheme('catppuccin-mocha')
 vim.cmd.colorscheme('tokyonight-night')
 
 -- make neovim transparent
