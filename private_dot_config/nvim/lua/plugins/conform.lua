@@ -7,6 +7,8 @@ return {
                 css = { 'prettier' },
                 json = { 'prettier' },
                 yaml = { 'prettier' },
+                jsx = { 'prettier' },
+                tsx = { 'prettier' },
                 lua = { 'stylua' },
                 python = { 'ruff_format', 'black' },
                 go = { 'gofmt', 'goimports', 'golines' },
