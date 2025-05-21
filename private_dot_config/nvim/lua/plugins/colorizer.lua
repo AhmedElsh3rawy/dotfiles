@@ -39,10 +39,6 @@ return {
                 },
 
                 mode = 'background',
-                -- virtualtext = ' ',
-                -- virtualtext_inline = 'before',
-                -- virtualtext_mode = 'foreground',
-                --
                 always_update = false,
             },
         })
