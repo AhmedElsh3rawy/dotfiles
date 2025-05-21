@@ -3,7 +3,15 @@ return {
     event = 'BufReadPre',
     config = function()
         require('colorizer').setup({
-            filetypes = { '*' },
+            filetypes = {
+                '*',
+                css = {
+                    mode = 'virtualtext',
+                    virtualtext = ' ',
+                    virtualtext_inline = 'before',
+                    virtualtext_mode = 'foreground',
+                },
+            },
             buftypes = {},
             user_commands = true,
             lazy_load = true,
@@ -30,11 +38,11 @@ return {
                     update_names = false,
                 },
 
-                mode = 'virtualtext',
-                virtualtext = ' ',
-                virtualtext_inline = 'before',
-                virtualtext_mode = 'foreground',
-
+                mode = 'background',
+                -- virtualtext = ' ',
+                -- virtualtext_inline = 'before',
+                -- virtualtext_mode = 'foreground',
+                --
                 always_update = false,
             },
         })
