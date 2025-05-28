@@ -78,6 +78,12 @@ return {
             vim.fn.sign_define('DapBreakpointCondition', { text = ' ', texthl = 'DapBreakpointCondition', linehl = '', numhl = '' })
             vim.fn.sign_define('DapLogPoint', { text = '.>', texthl = 'DapLogPoint', linehl = '', numhl = '' })
 
+            local vscode = require('dap.ext.vscode')
+            local json = require('plenary.json')
+            vscode.json_decode = function(str)
+                return vim.json.decode(json.json_strip_comments(str))
+            end
+
             require('config.dap')
             require('dap-python').setup('python3')
         end,
