@@ -27,13 +27,15 @@ for _, language in ipairs({ 'typescript', 'javascript' }) do
             sourceMaps = true,
         },
         -- Debug nodejs processes (make sure to add --inspect when you run the process)
+        -- for TypeScript usage in servers you have to debug OutDir (dist) that contains the compiled JavaScript
         {
             type = 'pwa-node',
             request = 'attach',
-            name = 'Auto Attach',
-            -- processId = dap_utils.pick_process,
-            cwd = vim.fn.getcwd(),
+            name = 'Attach',
+            processId = dap_utils.pick_process,
+            cwd = '${workspaceFolder}',
             sourceMaps = true,
+            outFiles = { '${workspaceFolder}/dist/**/*.js' },
         },
     }
 end
@@ -47,3 +49,6 @@ dap.configurations.python = {
         console = 'integratedTerminal',
     },
 }
+
+-- for logs
+dap.set_log_level('TRACE')
