@@ -53,7 +53,7 @@ return {
         'templ',
     },
     root_markers = {
-        'package.json',
+        'tailwind.config.js',
     },
     sittings = {
         tailwindCSS = {
