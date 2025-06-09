@@ -25,7 +25,5 @@ opt.incsearch = true
 
 O.signcolumn = 'yes'
 O.background = 'dark'
--- O.spell = true
--- O.spelllang = "en"
 
 vim.wo.relativenumber = true
