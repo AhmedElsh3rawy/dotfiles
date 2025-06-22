@@ -1,7 +1,5 @@
 general.import =[
-  # "~/.config/alacritty/rose-pine.toml"
-  "~/.config/alacritty/catppuccin.toml"
-  # "~/.config/alacritty/gruvbox.toml"
+  "~/.config/alacritty/tokyonight-night.toml"
 ]
 
 [env]
@@ -21,10 +19,6 @@ style = "Italic"
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
-
-# [colors.primary]
-# background = "#000000"
-# foreground = "#ffffff"
 
 [mouse]
 hide_when_typing = true
