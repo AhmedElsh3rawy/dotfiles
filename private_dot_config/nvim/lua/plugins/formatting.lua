@@ -5,10 +5,12 @@ return {
             formatters_by_ft = {
                 html = { 'prettier' },
                 css = { 'prettier' },
+                scss = { 'prettier' },
                 json = { 'prettier' },
                 yaml = { 'prettier' },
                 jsx = { 'prettier' },
                 tsx = { 'prettier' },
+                markdown = { 'prettier' },
                 lua = { 'stylua' },
                 python = { 'ruff_format', 'black' },
                 go = { 'gofmt', 'goimports', 'golines' },
