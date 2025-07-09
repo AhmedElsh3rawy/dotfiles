@@ -9,6 +9,8 @@ return {
         lint.linters_by_ft = {
             javascript = { 'biomejs' },
             typescript = { 'biomejs' },
+            javascriptreact = { 'biomejs' },
+            typescriptreact = { 'biomejs' },
             python = { 'ruff' },
             php = { 'phpstan' },
         }
