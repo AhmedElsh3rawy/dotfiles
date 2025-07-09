@@ -11,6 +11,12 @@ return {
                     virtualtext_inline = 'before',
                     virtualtext_mode = 'foreground',
                 },
+                scss = {
+                    mode = 'virtualtext',
+                    virtualtext = ' ',
+                    virtualtext_inline = 'before',
+                    virtualtext_mode = 'foreground',
+                },
             },
             buftypes = {},
             user_commands = true,
