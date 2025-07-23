@@ -33,6 +33,7 @@ bspc rule -a TelegramDesktop desktop='^5' focus=on follow=on
 bspc rule -a VSCodium desktop='^6' focus=on follow=on
 bspc rule -a Thunar desktop='^7' focus=on follow=on
 bspc rule -a Gimp-3.0 desktop='^8' focus=on follow=on
+bspc rule -a Emacs desktop='^10' focus=on follow=on
 bspc rule -a Galculator state=floating
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
