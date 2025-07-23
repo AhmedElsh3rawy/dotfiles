@@ -1,0 +1,113 @@
+#+TITLE: Ahmed's Emacs Configuration
+#+AUTHOR: Ahmed Elsharawy
+
+* Initial Setup
+
+** Bootstrap `straight.el`
+#+BEGIN_SRC emacs-lisp
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package)
+
+(setq straight-use-package-by-default t)
+
+#+END_SRC
+
+** Disable Startup Screen
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-startup-screen t)
+#+END_SRC
+
+** Enable Line Numbers
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
+#+END_SRC
+
+* UI Improvements
+** Disable Toolbar & Scrollbar
+#+BEGIN_SRC emacs-lisp
+(tool-bar-mode -1)
+(tooltip-mode -1)
+(set-fringe-mode 10)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(set-face-attribute 'default nil
+  :family "JetBrainsMono Nerd Font"
+  :height 140)
+#+END_SRC
+
+** Packages
+
+*** Doom-Themes
+#+BEGIN_SRC emacs-lisp
+(use-package doom-themes)
+(load-theme 'doom-tokyo-night t)
+(setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+#+END_SRC
+
+*** Evil
+#+BEGIN_SRC emacs-lisp
+(use-package evil
+  :straight t
+  :init
+  (setq evil-want-keybinding nil)
+  (setq evil-want-integration t)
+  (setq evil-search-module 'evil-search)
+  (setq evil-ex-complete-emacs-commands nil)
+  (setq evil-vsplit-window-right t)
+  (setq evil-split-window-below t)
+  :config
+  (evil-mode 1))
+#+END_SRC
+
+*** LSP-Mode
+#+BEGIN_SRC emacs-lisp
+(use-package lsp-mode
+  :straight t
+  :hook ((java-mode . lsp))
+  :commands lsp)
+
+(use-package lsp-java
+  :straight t
+  :after lsp
+  :config
+  (add-hook 'java-mode-hook #'lsp-java-enable))
+#+END_SRC
+
+*** Auto-Completion
+#+BEGIN_SRC emacs-lisp
+(use-package company
+  :straight t
+  :hook (after-init . global-company-mode))
+
+(use-package company-lsp
+  :straight t
+  :commands company-lsp)
+#+END_SRC
+
+*** Treesitter
+#+BEGIN_SRC emacs-lisp
+(use-package tree-sitter)
+(use-package tree-sitter-langs)
+;;(use-package tree-sitter-hl)  ; For enhanced highlighting
+(tree-sitter-langs-install-grammars '(c cpp javascript typescript java python))
+(global-tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+
+#+END_SRC
