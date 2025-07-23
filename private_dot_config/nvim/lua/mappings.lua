@@ -27,3 +27,6 @@ map('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = 'switch wind
 map('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = 'switch window right' })
 map('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = 'switch window down' })
 map('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'switch window up' })
+
+map('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+map('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
