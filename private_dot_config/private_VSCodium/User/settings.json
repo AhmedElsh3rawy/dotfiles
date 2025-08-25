@@ -1,0 +1,28 @@
+{
+  "editor.fontSize": 19,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative",
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "liveServer.settings.port": 3000,
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.noBrowser": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "firefox",
+  "vim.smartRelativeLine": true,
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "n"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
