@@ -6,6 +6,7 @@ return {
         config = function()
             require('tokyonight').setup({
                 style = 'night',
+                -- transparent = true,
                 on_highlights = function(highlights, _)
                     highlights['@punctuation.bracket'] = { fg = '#bb9af7' }
                     highlights['@punctuation.delimiter'] = { fg = '#f7768e' }
