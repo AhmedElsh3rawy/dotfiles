@@ -3,6 +3,7 @@
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
