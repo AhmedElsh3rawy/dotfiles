@@ -10,6 +10,7 @@ return {
                 'lua',
                 'javascript',
                 'typescript',
+                'tsx',
                 'html',
                 'css',
                 'rust',
