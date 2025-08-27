@@ -2,7 +2,8 @@ ignore-empty-password
 font="JetBrainsMono Nerd Font"
 
 clock
-timestr=%R
+timestr=%I:%M %p
+datestr=%a, %d %b
 
 image=~/.config/wallpaper/w3.jpg
 
