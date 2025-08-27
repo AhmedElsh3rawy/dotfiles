@@ -5,18 +5,18 @@ return {
         require('colorizer').setup({
             filetypes = {
                 '*',
-                css = {
-                    mode = 'virtualtext',
-                    virtualtext = ' ',
-                    virtualtext_inline = 'before',
-                    virtualtext_mode = 'foreground',
-                },
-                scss = {
-                    mode = 'virtualtext',
-                    virtualtext = ' ',
-                    virtualtext_inline = 'before',
-                    virtualtext_mode = 'foreground',
-                },
+                -- css = {
+                --     mode = 'virtualtext',
+                --     virtualtext = ' ',
+                --     virtualtext_inline = 'before',
+                --     virtualtext_mode = 'foreground',
+                -- },
+                -- scss = {
+                --     mode = 'virtualtext',
+                --     virtualtext = ' ',
+                --     virtualtext_inline = 'before',
+                --     virtualtext_mode = 'foreground',
+                -- },
             },
             buftypes = {},
             user_commands = true,
