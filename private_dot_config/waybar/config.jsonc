@@ -143,7 +143,7 @@
     "format-ethernet": "{ipaddr}/{cidr}",
     "tooltip-format": "{essid} {ifname} via {gwaddr}",
     "format-linked": "{ifname} (No IP)",
-    "format-disconnected": " 󰤮 ",
+    "format-disconnected": "󰤮 no-wifi",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "bluetooth": {
