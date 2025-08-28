@@ -4,6 +4,7 @@
   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
   "editor.cursorBlinking": "solid",
+  "editor.stickyScroll.enabled": false,
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
