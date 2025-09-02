@@ -2,7 +2,6 @@
 @define-color darkbase     #16161e;
 @define-color text         #a9b1d6;
 @define-color cursor       #444b6a;
-@define-color cursor_text  #d5d6db;
 
 @define-color color0  #1a1b26;
 @define-color color1  #73daca;
@@ -13,7 +12,8 @@
 @define-color color6  #b4f9f8;
 @define-color color7  #a9b1d6;
 
-@define-color color8  #444b6a;
+/* @define-color color8  #444b6a; */
+@define-color color8  #d5d6db;
 @define-color color9  #73daca;
 @define-color color10 #9ece6a;
 @define-color color11 #0db9d7;
@@ -210,6 +210,13 @@ label:focus {
   background-color: @color16;
 }
 
+#bluetooth {
+  font-size: 18px;
+  background-color: @color5;
+  color: @base;
+  border-radius: 5px;
+}
+
 #pulseaudio {
   background-color: @color17;
   color: @base;
@@ -245,7 +252,7 @@ label:focus {
 }
 
 #custom-power {
-  background-color: @color5;
+  background-color: @color8;
   color: @base;
   border-radius: 5px;
   font-size: 20px;
