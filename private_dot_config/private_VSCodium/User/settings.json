@@ -23,7 +23,7 @@
   ],
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Dark",
   "window.menuBarVisibility": "compact",
   "workbench.layoutControl.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
