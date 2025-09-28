@@ -41,7 +41,7 @@ window#waybar {
   margin: 0 1px;
   padding: 2px 5px;
   font-size: 12px;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.3s ease-in-out;
   font-weight: bolder;
 }
 
