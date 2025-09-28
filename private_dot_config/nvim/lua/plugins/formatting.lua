@@ -3,13 +3,13 @@ return {
     config = function()
         require('conform').setup({
             formatters_by_ft = {
-                html = { 'prettier' },
-                css = { 'prettier' },
-                scss = { 'prettier' },
-                json = { 'prettier' },
+                html = { 'biome', 'prettier' },
+                css = { 'biome', 'prettier' },
+                scss = { 'biome', 'prettier' },
+                json = { 'biome', 'prettier' },
                 yaml = { 'prettier' },
-                javascriptreact = { 'biome-check' },
-                typescriptreact = { 'biome-check' },
+                javascriptreact = { 'biome', 'biome-organize-imports' },
+                typescriptreact = { 'biome', 'biome-organize-imports' },
                 markdown = { 'prettier' },
                 lua = { 'stylua' },
                 python = { 'ruff_format', 'black' },
@@ -21,6 +21,7 @@ return {
                 cpp = { 'clang_format' },
                 sql = { 'sql_formatter' },
                 php = { 'pint' },
+                qml = { 'qmlformat' },
             },
 
             format_on_save = {
