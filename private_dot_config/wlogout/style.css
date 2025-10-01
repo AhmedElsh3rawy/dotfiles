@@ -1,63 +1,63 @@
 * {
-  font-family:
-    JetBrainsMono Nerd Font,
-    FontAwesome,
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-  background-image: none;
-  box-shadow: none;
-  font-size: 20px;
-  font-weight: bold;
+	font-family:
+		JetBrainsMono Nerd Font,
+		FontAwesome,
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif;
+	background-image: none;
+	box-shadow: none;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 window {
-  background-color: rgba(12, 12, 12, 0.1);
-  background-image: url("../wallpaper/w3.jpg");
+	background-color: rgba(12, 12, 12, 0.5);
+	background-image: url("../wallpaper/w3.jpg");
 }
 
 button {
-  border-radius: 10px;
-  border-color: black;
-  text-decoration-color: #ffffff;
-  color: #ffffff;
-  background-color: #1a1b26;
-  border-style: solid;
-  border-width: 1px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25%;
-  margin: 10px;
+	border-radius: 10px;
+	border-color: black;
+	text-decoration-color: #ffffff;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-style: solid;
+	border-width: 1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	margin: 10px;
 }
 
 button:focus,
 button:active,
 button:hover {
-  outline-style: none;
-  border: 3px solid #2ac3de;
+	outline-style: none;
+	border: 5px solid #ffffff;
 }
 
 #lock {
-  background-image: image(url("icons/lock.png"));
+	background-image: image(url("icons/lock.png"));
 }
 
 #logout {
-  background-image: image(url("icons/logout.png"));
+	background-image: image(url("icons/logout.png"));
 }
 
 #suspend {
-  background-image: image(url("icons/suspend.png"));
+	background-image: image(url("icons/suspend.png"));
 }
 
 #hibernate {
-  background-image: image(url("icons/hibernate.png"));
+	background-image: image(url("icons/hibernate.png"));
 }
 
 #shutdown {
-  background-image: image(url("icons/shutdown.png"));
+	background-image: image(url("icons/shutdown.png"));
 }
 
 #reboot {
-  background-image: image(url("icons/reboot.png"));
+	background-image: image(url("icons/reboot.png"));
 }
