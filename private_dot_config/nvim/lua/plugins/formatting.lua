@@ -3,10 +3,10 @@ return {
     config = function()
         require('conform').setup({
             formatters_by_ft = {
-                html = { 'biome', 'prettier' },
-                css = { 'biome', 'prettier' },
-                scss = { 'biome', 'prettier' },
-                json = { 'biome', 'prettier' },
+                html = { 'prettier' },
+                css = { 'prettier' },
+                scss = { 'prettier' },
+                json = { 'prettier' },
                 yaml = { 'prettier' },
                 javascriptreact = { 'biome', 'biome-organize-imports' },
                 typescriptreact = { 'biome', 'biome-organize-imports' },
