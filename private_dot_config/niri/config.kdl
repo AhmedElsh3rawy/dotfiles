@@ -368,6 +368,7 @@ window-rule {
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.tweaks"
     match app-id="org.gnome.Totem"
+    match app-id="org.gnome.DiskUtility"
     match app-id="org.gnome.Decibels"
     match app-id="org.pulseaudio.pavucontrol"
     match app-id="com.obsproject.Studio"
