@@ -23,10 +23,13 @@
   ],
   "workbench.iconTheme": "material-icon-theme",
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Dark Modern",
+  "workbench.colorTheme": "Default Dark Modern",
   "window.menuBarVisibility": "compact",
   "workbench.layoutControl.enabled": false,
   "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit"
+  },
   "editor.formatOnSave": true,
 
   "[javascript]": {
