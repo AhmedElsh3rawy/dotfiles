@@ -22,6 +22,7 @@ opt.scrolloff = 8
 opt.cursorline = true
 opt.hlsearch = false
 opt.incsearch = true
+opt.winborder = 'rounded'
 
 O.signcolumn = 'yes'
 O.background = 'dark'
