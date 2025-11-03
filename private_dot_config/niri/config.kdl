@@ -410,6 +410,7 @@ window-rule {
     match app-id="org.freedesktop.Xwayland"
     match app-id="brave-browser"
     match app-id="codium"
+    match app-id="obsidian"
     match app-id="DBeaver"
     match app-id="PacketTracer"
     open-maximized true
