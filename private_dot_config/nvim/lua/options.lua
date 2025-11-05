@@ -8,7 +8,11 @@ G.loaded_netrw = 0
 G.loaded_netrwPlugin = 0
 G.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
 
+O.signcolumn = 'yes'
+O.background = 'dark'
+
 opt.number = true
+opt.relativenumber = true
 opt.swapfile = false
 opt.expandtab = true -- Use spaces instead of tabs
 opt.tabstop = 4 -- Number of spaces a tab counts for
@@ -23,8 +27,5 @@ opt.cursorline = true
 opt.hlsearch = false
 opt.incsearch = true
 opt.winborder = 'rounded'
-
-O.signcolumn = 'yes'
-O.background = 'dark'
-
-vim.wo.relativenumber = true
+opt.splitright = true
+opt.splitbelow = false
