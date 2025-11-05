@@ -413,6 +413,8 @@ window-rule {
     match app-id="obsidian"
     match app-id="DBeaver"
     match app-id="PacketTracer"
+    match app-id="com.mitchellh.ghostty"
+    // match app-id="org.pwmt.zathura"
     open-maximized true
 }
 
