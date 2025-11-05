@@ -11,7 +11,7 @@ set recolor-keephue true
 set font "JetBrainsMono Nerd Font"
 
 # theme
-include catppuccin-mocha
+include tokyonight-night
 
 # mappings
 map <C-i> recolor
