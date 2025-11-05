@@ -23,6 +23,7 @@ return {
                 sql = { 'sql_formatter' },
                 php = { 'pint' },
                 qml = { 'qmlformat' },
+                tex = { 'latexindent' }, -- pacman -S perl-yaml-tiny perl-file-homedir perl-file-which perl-unicode-linebreak
             },
 
             format_on_save = {
