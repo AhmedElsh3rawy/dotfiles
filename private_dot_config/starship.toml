@@ -39,3 +39,5 @@ disabled = true
 disabled = true
 [terraform]
 disabled = true
+[aws]
+disabled = true
