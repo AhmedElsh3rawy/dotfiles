@@ -18,15 +18,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.keymap.set(mode, lhs, rhs, { buffer = buf, silent = true })
         end
 
-        -- stylua: ignore
-        map('n', 'K', function() vim.lsp.buf.hover({ border = 'rounded' }) end)
+        map('n', 'K', vim.lsp.buf.hover)
         map('n', 'gd', vim.lsp.buf.definition)
         map('n', 'gD', vim.lsp.buf.declaration)
         map('n', 'gi', vim.lsp.buf.implementation)
         map('n', 'gr', vim.lsp.buf.references)
         map('n', 'gt', vim.lsp.buf.type_definition)
-        -- stylua: ignore
-        map('n', '<C-k>', function() vim.lsp.buf.signature_help({ border = 'rounded' }) end)
+        map('n', '<C-k>', vim.lsp.buf.signature_help)
         map('n', '<leader>rn', vim.lsp.buf.rename)
         map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action)
     end,
