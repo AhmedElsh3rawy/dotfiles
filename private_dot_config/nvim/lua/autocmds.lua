@@ -6,6 +6,18 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
+-- make help files split vertically
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'help',
+    command = 'wincmd L',
+})
+
+-- Auto-compile LaTeX files on save
+vim.api.nvim_create_autocmd('BufWritePost', {
+    pattern = '*.tex',
+    command = 'silent! !latexmk -pdf %:p > /dev/null 2>&1 &',
+})
+
 -- LazyVim autocmds
 
 local function augroup(name)
@@ -119,18 +131,6 @@ vim.api.nvim_create_autocmd({ 'FileType' }, {
     callback = function()
         vim.opt_local.conceallevel = 0
     end,
-})
-
--- make help files split vertically
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = 'help',
-    command = 'wincmd L',
-})
-
--- Auto-compile LaTeX files on save
-vim.api.nvim_create_autocmd('BufWritePost', {
-    pattern = '*.tex',
-    command = 'silent! !latexmk -pdf %:p > /dev/null 2>&1 &',
 })
 
 -- Auto create dir when saving a file, in case some intermediate directory does not exist
