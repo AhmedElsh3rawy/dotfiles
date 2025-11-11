@@ -14,18 +14,22 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(event)
         local buf = event.buf
 
-        local function map(mode, lhs, rhs)
-            vim.keymap.set(mode, lhs, rhs, { buffer = buf, silent = true })
+        local function map(mode, lhs, rhs, desc)
+            local opts = { noremap = true, buffer = buf, silent = true }
+            if desc then
+                opts.desc = desc
+            end
+            vim.keymap.set(mode, lhs, rhs, opts)
         end
 
-        map('n', 'K', vim.lsp.buf.hover)
-        map('n', 'gd', vim.lsp.buf.definition)
-        map('n', 'gD', vim.lsp.buf.declaration)
-        map('n', 'gi', vim.lsp.buf.implementation)
-        map('n', 'gr', vim.lsp.buf.references)
-        map('n', 'gt', vim.lsp.buf.type_definition)
-        map('n', '<C-k>', vim.lsp.buf.signature_help)
-        map('n', '<leader>rn', vim.lsp.buf.rename)
-        map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action)
+        map('n', 'K', vim.lsp.buf.hover, 'Hover')
+        map('n', 'gd', vim.lsp.buf.definition, 'Go to definition')
+        map('n', 'gD', vim.lsp.buf.declaration, 'Go to declaration')
+        map('n', 'gi', vim.lsp.buf.implementation, 'Implementation')
+        map('n', 'gr', vim.lsp.buf.references, 'References')
+        map('n', 'gt', vim.lsp.buf.type_definition, 'Type definition')
+        map('n', '<C-k>', vim.lsp.buf.signature_help, 'Signature help')
+        map('n', '<leader>rn', vim.lsp.buf.rename, 'Rename')
+        map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, 'Code action')
     end,
 })
