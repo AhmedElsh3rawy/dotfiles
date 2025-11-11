@@ -8,6 +8,7 @@ return {
                 'c',
                 'cpp',
                 'lua',
+                'java',
                 'javascript',
                 'typescript',
                 'tsx',
