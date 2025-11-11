@@ -1,32 +1,43 @@
-local map = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local function map(mode, lhs, rhs, desc)
+    local opts = { noremap = true, silent = true }
+    if desc then
+        opts.desc = desc
+    end
+    vim.keymap.set(mode, lhs, rhs, opts)
+end
 
-local builtin = require('telescope.builtin')
+map('v', 'J', ":m '>+1<cr>gv=gv", 'Move selected lines down')
+map('v', 'K', ":m '<-2<cr>gv=gv", 'Move selected lines up')
 
-map('v', 'J', ":m '>+1<CR>gv=gv")
-map('v', 'K', ":m '<-2<CR>gv=gv")
--- Save file
-map('n', '<C-s>', '<cmd>w<CR>')
-map('x', '<leader>p', [["_dP]])
--- Close active buffer
-map('n', '<leader>x', '<cmd>bd<CR>')
--- Cycle opened buffers
-map('n', '<Tab>', '<cmd>bnext<CR>', opts)
-map('n', '<S-Tab>', '<cmd>bprevious<CR>', opts)
--- Telescope
-map('n', '<leader>ff', builtin.find_files, { desc = 'Find file' })
-map('n', '<leader>fw', builtin.live_grep, { desc = 'Find word' })
-map('n', '<leader>fh', builtin.help_tags, { desc = 'Find help' })
-map('n', '<leader>fb', builtin.buffers, { desc = 'Find buffer' })
--- nvim-tree
-map('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Nvim tree' })
--- jump normal mode
-map('i', 'jn', '<Esc>', {})
--- Navigate vim panes better
-map('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = 'switch window left' })
-map('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = 'switch window right' })
-map('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = 'switch window down' })
-map('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'switch window up' })
+map('n', '<C-s>', '<cmd>w<cr>', 'Save file')
 
-map('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-map('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+map('x', '<leader>p', [["_dP]], 'Paste without losing yanked')
+
+map('n', '<leader>x', '<cmd>bd<cr>', 'Close active buffer')
+
+map('n', '<Tab>', '<cmd>bnext<cr>', 'Next buffer')
+map('n', '<S-Tab>', '<cmd>bprevious<cr>', 'Prev buffer')
+-- Fzf-lua
+map('n', '<leader>ff', '<cmd>FzfLua files<cr>', 'Find file')
+map('n', '<leader>fw', '<cmd>FzfLua live_grep<cr>', 'Find word')
+map('n', '<leader>fb', '<cmd>FzfLua buffers<cr>', 'Find buffer')
+map('n', '<leader>fh', '<cmd>FzfLua helptags<cr>', 'Find help')
+map('n', '<leader>fg', '<cmd>FzfLua git_files<cr>', 'Find file (git-files)')
+
+map('n', '<leader>gc', '<cmd>FzfLua git_commits<CR>', 'Commits')
+map('n', '<leader>gd', '<cmd>FzfLua git_diff<cr>', 'Git Diff (hunks)')
+map('n', '<leader>gl', '<cmd>FzfLua git_commits<CR>', 'Commits')
+map('n', '<leader>gs', '<cmd>FzfLua git_status<CR>', 'Status')
+map('n', '<leader>gS', '<cmd>FzfLua git_stash<cr>', 'Git Stash')
+
+map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', 'Toggle nvim tree')
+
+map('i', 'jn', '<Esc>', 'Jump to normal mode')
+
+map('n', '<C-h>', '<C-w>h', 'switch window left')
+map('n', '<C-l>', '<C-w>l', 'switch window right')
+map('n', '<C-j>', '<C-w>j', 'switch window down')
+map('n', '<C-k>', '<C-w>k', 'switch window up')
+
+map('n', '<leader>df', vim.diagnostic.open_float, 'Open floating diagnostic message')
+map('n', '<leader>dl', vim.diagnostic.setloclist, 'Open diagnostics list')
