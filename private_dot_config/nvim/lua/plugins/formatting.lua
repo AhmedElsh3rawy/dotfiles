@@ -20,6 +20,7 @@ return {
                 bash = { 'shfmt' },
                 c = { 'clang_format' },
                 cs = { 'clang_format' },
+                java = { 'clang_format' },
                 cpp = { 'clang_format' },
                 sql = { 'sql_formatter' },
                 php = { 'pint' },
