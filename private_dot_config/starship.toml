@@ -31,6 +31,10 @@ disabled = true
 disabled = true
 [perl]
 disabled = true
+[gradle]
+disabled = true
+[kotlin]
+disabled = true
 [java]
 disabled = true
 [scala]
