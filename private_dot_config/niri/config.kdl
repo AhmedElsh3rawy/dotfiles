@@ -309,7 +309,7 @@ layout {
 spawn-at-startup "mako"
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
-spawn-sh-at-startup "~/.config/scripts/wallpaper.sh"
+spawn-sh-at-startup "~/.config/niri/scripts/wallpaper.sh"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -444,7 +444,8 @@ binds {
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
-    Mod+Y hotkey-overlay-title="Open Clipboard" { spawn-sh "cliphist list | fuzzel --dmenu -w 60 -l 20 | cliphist decode | wl-copy"; }
+    // Mod+Y hotkey-overlay-title="Open Clipboard" { spawn-sh "cliphist list | fuzzel --dmenu -w 60 -l 20 | cliphist decode | wl-copy"; }
+    Mod+Y hotkey-overlay-title="Open Clipboard" { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
