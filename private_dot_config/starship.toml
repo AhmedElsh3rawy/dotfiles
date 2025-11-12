@@ -45,3 +45,5 @@ disabled = true
 disabled = true
 [aws]
 disabled = true
+[zig]
+disabled = true
