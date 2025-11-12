@@ -28,4 +28,4 @@ else
 fi
 
 # tmux color output
-echo "#[fg=#2e2e3e]#[fg=$color,bg=#2e2e3e] $icon $capacity%#[default]"
+echo "#[fg=$color,bg=#2e2e3e]$icon $capacity% #[default]"
