@@ -24,11 +24,16 @@ map('n', '<leader>fb', '<cmd>FzfLua buffers<cr>', 'Find buffer')
 map('n', '<leader>fh', '<cmd>FzfLua helptags<cr>', 'Find help')
 map('n', '<leader>fg', '<cmd>FzfLua git_files<cr>', 'Find file (git-files)')
 
-map('n', '<leader>gc', '<cmd>FzfLua git_commits<CR>', 'Commits')
+map('n', '<leader>gc', '<cmd>FzfLua git_commits<cr>', 'Commits')
 map('n', '<leader>gd', '<cmd>FzfLua git_diff<cr>', 'Git Diff (hunks)')
-map('n', '<leader>gl', '<cmd>FzfLua git_commits<CR>', 'Commits')
-map('n', '<leader>gs', '<cmd>FzfLua git_status<CR>', 'Status')
+map('n', '<leader>gl', '<cmd>FzfLua git_commits<cr>', 'Commits')
+map('n', '<leader>gs', '<cmd>FzfLua git_status<cr>', 'Status')
 map('n', '<leader>gS', '<cmd>FzfLua git_stash<cr>', 'Git Stash')
+
+map('n', '<leader>sm', '<cmd>FzfLua marks<cr>', 'Jump to mark')
+map('n', '<leader>sH', '<cmd>FzfLua highlights<cr>', 'Search highlight groups')
+map('n', '<leader>sq', '<cmd>FzfLua quickfix<cr>', 'Quickfix list')
+map('n', '<leader>sC', '<cmd>FzfLua commands<cr>', 'Search commands')
 
 map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', 'Toggle nvim tree')
 
